@@ -1,0 +1,553 @@
+/*Netflix*/
+.fondo-netflix{
+    width: 100%;
+    position: relative;
+    background-image:  url("../img/onepiece.webp");
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.fondo-netflix:before {
+	content:'';
+	position: absolute;
+    top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	
+   
+}
+
+.encabezado-inicio{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    color:white;
+    background-color: rgba(0,0,0,1);
+    position: fixed;
+    z-index: 1;
+
+}
+.encabezadologo-inicio{
+    cursor: pointer;
+     width: 97px;
+     height: 68px;
+     margin-top: 0px;
+     margin-left: 40px;
+ }
+.menu{
+    width: 70%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.menu ul{
+   width: 100%;
+   margin-top: 0px;
+   margin-bottom: 0px;
+}
+.menuitem{
+   margin-right: 15px;
+    display: inline-block;
+    list-style: none;
+    font-size: 14px;
+    font-family: 'Netflix Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+}
+.opciones{
+    width: 20%;
+    display: flex;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.opciones ul{
+    width: 100%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+ }
+.opcionlista{
+    margin-right: 15px;
+    display: inline-block;
+    list-style: none;
+    font-size: 14px;
+    font-family: 'Netflix Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+}
+.imagen{
+    width: 30px;
+}
+
+.contentLogo{
+    position: absolute;
+    width:36% ;
+    height: 343px;
+    margin-top: 150px;
+    margin-left: 40px;
+}
+.logoone{
+    position: absolute;
+    width: 100%;
+    height: 55%;
+    background-image:  url("../img/logoone.webp");
+    background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.descripcionOnePiece{
+    position: absolute;
+    color: #fff;
+    font-weight: 400;
+    line-height: normal;
+    width: 100%;
+    font-size: 1.2vw;
+    text-shadow: 2px 2px 4px rgb(0 0 0 / 45%);
+    margin-top: 200px;
+    padding-left: 5px;
+}
+
+.btnReproduce{
+    position: absolute;
+    width: 175px;
+    height: 43px;
+    background-color: rgba(255,255,255);
+    margin-left: 0;
+    margin-top: 270px;
+    color:black;
+    appearance: none;
+    border: 0;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Netflix Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+    font-size: 17px;
+    font-weight: bold;
+    text-align: center;
+}
+.cambio {  
+    display: inline-block;
+    transform: scale(var(--ggs,2));
+    margin-right: 5px;
+}
+.cambio2 {  
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.btnMasInfo{
+    position: absolute;
+    width: 219px;
+    height: 43px;
+    background-color: rgba(109,109,110);
+    margin-left: 190px;
+    margin-top: 270px;
+    color:white;
+    appearance: none;
+    border: 0;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Netflix Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+}
+.contenido-netflix{
+ position: absolute;
+ width: 100%;
+ height: 1120px;
+ background-color: #141414;;
+ margin-top: 590px;
+}
+.titulos{
+    color:white;
+    display: block;
+    font-size: 18px;
+    margin-left: 30px;
+    font-weight: bold;
+}
+.carrusel1{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 5px;
+}
+.serie1-1{
+    width: 18%;
+    height: 125px;
+    background-image:  url("../img/s1.jpg");
+    background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+    margin-left: 30px;
+}
+.serie1-1:hover{
+    border: white 2px solid;
+    cursor: pointer;
+}
+.serie1-2{
+    width: 18%;
+    height: 125px;
+    background-image:  url("../img/s2.jpg");
+    background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+  
+}
+.serie1-2:hover{
+    border: white 2px solid;
+    cursor: pointer;
+}
+.serie1-3{
+    width: 18%;
+    height: 125px;
+    background-image:  url("../img/s3.webp");
+    background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+   
+}
+.serie1-3:hover{
+    border: white 2px solid;
+    cursor: pointer;
+}
+.serie1-4{
+    width: 18%;
+    height: 125px;
+    background-image:  url("../img/s4.jpg");
+    background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+    
+}
+.serie1-4:hover{
+    border: white 2px solid;
+    cursor: pointer;
+}
+.serie1-5{
+    width: 18%;
+    height: 125px;
+    background-image:  url("../img/s5.jpg");
+    background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.serie1-5:hover{
+    border: white 2px solid;
+    cursor: pointer;
+}
+.serie1-6{
+    width: 7%;
+    height: 125px;
+    background-image:  url("../img/s6.jpg");
+    background-position: left center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.serie1-6:hover{
+    border: white 2px solid;
+    cursor: pointer;
+}
+.tendencias{
+    margin-top: 40px;
+}
+.carrusel2{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 5px;
+}
+.serie2-1{
+    width: 18%;
+    height: 125px;
+    background-image:  url("../img/ss1.webp");
+    background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+    margin-left: 30px;
+}
+.serie2-1:hover{
+    border: white 2px solid;
+    cursor: pointer;
+}
+.serie2-2{
+    width: 18%;
+    height: 125px;
+    background-image:  url("../img/ss2.jpg");
+    background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+  
+}
+.serie2-2:hover{
+    border: white 2px solid;
+    cursor: pointer;
+}
+.serie2-3{
+    width: 18%;
+    height: 125px;
+    background-image:  url("../img/ss3.jpg");
+    background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+   
+}
+.serie2-3:hover{
+    border: white 2px solid;
+    cursor: pointer;
+}
+.serie2-4{
+    width: 18%;
+    height: 125px;
+    background-image:  url("../img/ss4.jpg");
+    background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+    
+}
+.serie2-4:hover{
+    border: white 2px solid;
+    cursor: pointer;
+}
+.serie2-5{
+    width: 18%;
+    height: 125px;
+    background-image:  url("../img/ss5.jpg");
+    background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.serie2-5:hover{
+    border: white 2px solid;
+    cursor: pointer;
+}
+.serie2-6{
+    width: 7%;
+    height: 125px;
+    background-image:  url("../img/ss6.jpg");
+    background-position: left center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.serie2-6:hover{
+    border: white 2px solid;
+    cursor: pointer;
+}
+.anime{
+    margin-top: 40px;
+}
+
+.carrusel3{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 5px;
+}
+.serie3-1{
+    width: 18%;
+    height: 125px;
+    background-image:  url("../img/sss1.jpg");
+    background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+    margin-left: 30px;
+}
+.serie3-1:hover{
+    border: white 2px solid;
+    cursor: pointer;
+}
+.serie3-2{
+    width: 18%;
+    height: 125px;
+    background-image:  url("../img/sss2.webp");
+    background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+  
+}
+.serie3-2:hover{
+    border: white 2px solid;
+    cursor: pointer;
+}
+.serie3-3{
+    width: 18%;
+    height: 125px;
+    background-image:  url("../img/sss3.jpg");
+    background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+   
+}
+.serie3-3:hover{
+    border: white 2px solid;
+    cursor: pointer;
+}
+.serie3-4{
+    width: 18%;
+    height: 125px;
+    background-image:  url("../img/sss4.webp");
+    background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+    
+}
+.serie3-4:hover{
+    border: white 2px solid;
+    cursor: pointer;
+}
+.serie3-5{
+    width: 18%;
+    height: 125px;
+    background-image:  url("../img/sss5.webp");
+    background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.serie3-5:hover{
+    border: white 2px solid;
+    cursor: pointer;
+}
+.serie3-6{
+    width: 7%;
+    height: 125px;
+    background-image:  url("../img/sss6.webp");
+    background-position: left center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.serie3-6:hover{
+    border: white 2px solid;
+    cursor: pointer;
+}
+
+.top10{
+    margin-top: 40px;
+}
+
+.populares{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 5px;
+}
+.top1{
+    width: 18%;
+    height: 125px;
+    background-image:  url("../img/Top1.png");
+    background-position: center center;
+	background-size: cover;
+    background-repeat: no-repeat;
+    margin-left: 30px;
+}
+.top1:hover{
+    border: white 2px solid;
+    cursor: pointer;
+}
+.top2{
+    width: 18%;
+    height: 125px;
+    background-image:  url("../img/Top2.png");
+    background-position: center center;
+	background-size: cover;
+    background-repeat: no-repeat;
+}
+.top2:hover{
+    border: white 2px solid;
+    cursor: pointer;
+}
+.top3{
+    width: 18%;
+    height: 125px;
+    background-image:  url("../img/Top3.png");
+    background-position: center center;
+	background-size: cover;
+    background-repeat: no-repeat;
+}
+.top3:hover{
+    border: white 2px solid;
+    cursor: pointer;
+}
+.top4{
+    width: 18%;
+    height: 125px;
+    background-image:  url("../img/Top4.png");
+    background-position: center center;
+	background-size: cover;
+    background-repeat: no-repeat;
+}
+.top4:hover{
+    border: white 2px solid;
+    cursor: pointer;
+}
+.top5{
+    width: 18%;
+    background-image:  url("../img/Top5.png");
+    background-position: center center;
+	background-size: cover;
+    background-repeat: no-repeat;
+}
+.top5:hover{
+    border: white 2px solid;
+    cursor: pointer;
+}
+.top6{
+    width: 7%;
+    background-image:  url("../img/Top6.png");
+    background-position: center center;
+	background-size: cover;
+    background-repeat: no-repeat;
+}
+.top6:hover{
+    border: white 2px solid;
+    cursor: pointer;
+}
+
+.pie-paginaNetflix{
+    width: 100%;
+    padding-top: 30px;
+    padding-right: 0px;
+    margin-top: 60px;
+}
+
+.redes-sociales{
+    color: #757575;
+    margin: 0 0 30px;
+    padding-left: 130px;
+    width: 1000px;
+    display: flex;
+    flex-direction: row;
+    gap:10px;
+}
+
+.menu-footer{
+    width: 1000px;
+   
+    padding-left: 130px;
+}
+.menu-footer ul{
+    padding-left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.menu-footer ul li{
+    width: 25%;
+    display: inline;
+    color: #757575;
+    list-style: none;
+    font-size: 13px;
+    margin-bottom: 16px;
+}
+
+.servicio{
+    background-color: #000;
+    font-size: 14px;
+    color: grey;
+    border: solid 1px grey;
+    height: 35px;
+    margin-left: 130px;
+}
+
+.copy{
+    font-size: 11px;
+    color: grey;
+    margin-left: 130px;
+    font-family:  'Netflix Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+}

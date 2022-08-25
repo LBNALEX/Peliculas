@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel='stylesheet' type='text/css' media='screen' href='fontawesome-free/css/all.min.css'>
+        <link href='https://css.gg/globe-alt.css' rel='stylesheet'>
+        <link rel="stylesheet" href="src/css/estilos.css">
+        <link rel="stylesheet" href="src/css/estiloslogin.css">
+        <title>Netflix</title>
+        <link rel="shortcut icon" href="src/img/netflix_logo_icon_170919.ico">
+    </head>
+
+    <body class="fondo">
+        <header class="encabezado">
+            <img src="src/img/Logo.svg" alt="Netflix" class="encabezadologo">
+        </header>
+        <div class="contenido">
+            <h1 class="isesion">Inicia sesión</h1>
+            <form class="formulario">
+                <input type="text" class="correo" placeholder="Email o número de teléfono">
+                <input type="password" class="contraseña" placeholder="Contraseña">
+                <input type="button" value="Iniciar sesión" class="btn-iniciar" onclick="location.href='inicio.html'">>
+                <input type="checkbox" name="recuerdame" id="recuerdame" class="chk-recuerdame">
+                <label for="recuerdame" class="etiqueta"><span class="lbl-recuerdame">Recuérdame</span></label>
+                <a href="#" class="help">¿Necesitas ayuda?</a>
+            </form>
+
+            <div class="informacion">
+                <div class="primeravez">¿Primera vez en Netflix?
+                    <a href="#" class="suscribete-ahora">Suscribete ahora.</a>
+                </div>
+                <div class="no-robot">
+                    <span class="captcha">Esta página está protegida por Google reCAPTCHA <br>
+                        para comprobar que no eres un robot.</span>
+                    <a href="#" class="masinfo">Más info.</a>
+                </div>
+            </div>
+        </div>
+
+        <footer class="pie-pagina">
+            <div class="preguntas">
+                <span>¿Preguntas? Llama al 800-062-2406</span>
+            </div>
+            <div class="menu-footer">
+                <ul>
+                    <li>Preguntas frecuentes</li>
+                    <li>Centro de ayuda</li>
+                    <li>Términos de uso</li>
+                    <li>Privacidad</li>
+                    <li>Preferencias de cookies</li>
+                    <li>Información corporativa</li>
+                </ul>
+            </div>
+            <div class="lenguaje">
+                <select name="select" class="combo">
+                    <option class="fa" value="español" selected><em class="gg-globe-alt"></em> Español</option>
+                    <option class="fa" value="ingles"> <em class="gg-globe-alt"></em> Ingles</option>
+                </select>
+            </div>
+        </footer>
+    </body>
+</html>

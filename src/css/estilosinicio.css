@@ -1,0 +1,228 @@
+/*Pagina inicio*/
+.fondo-negro{
+    background: #141414;
+}
+
+
+.encabezadologo-inicio{
+   cursor: pointer;
+    width: 97px;
+    height: 68px;
+    margin-top: 0px;
+    margin-left: 40px;
+}
+.contenido-inicio{
+    display: flex;
+    flex-direction: column; 
+    justify-content: flex-start;
+    width: 743px;
+    height: 314px;
+    align-items: center;
+    padding-top: 50px;
+    padding-right: 68px;
+    padding-bottom: 40px;
+    padding-left: 68px;
+    margin-bottom: 90px;
+    border-radius: 4px;
+    position: absolute;
+    top: 100px;
+    left: 200px;
+}
+
+.inicioh1{
+    text-align: center;
+    margin: 0;
+    font-size: 32px;
+    width: 100%;
+    color: #fff;
+    font-size: 3.5vw;
+    font-weight: unset;
+    display: block;
+}
+.perfiles{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 3%;
+    margin-top: 30px;
+}
+.perfil1{
+    width: 18%;
+    height: 128px;
+    background-image:  url("../img/koky.png");
+    background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+    border-radius: 4px;
+}
+.perfil1:hover{
+    border: white 2px solid;
+    cursor: pointer;
+}
+
+.perfil2{
+    width: 18%;
+    height: 128px;
+    background-image:  url("../img/rigo.png");
+    background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+    border-radius: 4px;
+}
+.perfil2:hover{
+    border: white 2px solid;
+    cursor: pointer;
+}
+
+.perfil3{
+    width: 18%;
+    height: 128px;
+    background-image:  url("../img/bicho.png");
+    background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+    border-radius: 4px;
+}
+.perfil3:hover{
+    border: white 2px solid;
+    cursor: pointer;
+}
+.perfil4{
+    width: 18%;
+    height: 128px;
+    background-image:  url("../img/alex.png");
+    background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+    border-radius: 4px;
+}
+.perfil4:hover{
+    border: white 2px solid;
+    cursor: pointer;
+}
+.perfil5{
+    width: 18%;
+    height: 128px;
+    background-image:  url("../img/niños.png");
+    background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+    border-radius: 4px;
+}
+.perfil5:hover{
+    border: white 2px solid;
+    cursor: pointer;
+}
+.nombres{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 3%;
+    margin-top: 30px;
+    margin: 0;
+}
+
+.nombre1{
+    width: 18%;
+    height:1.2em;
+}
+
+.koky{
+    color: grey;
+    display: block;
+    text-align: center;
+    font-size: 1.3vw;
+    margin: 0.6em 0;
+}
+
+.koky:hover{
+    color: white;
+    cursor: pointer;
+}
+
+.nombre2{
+    width: 18%;
+    height:1.2em;
+}
+.rigo{
+    color: grey;
+    display: block;
+    text-align: center;
+    font-size: 1.3vw;
+    margin: 0.6em 0;
+}
+.rigo:hover{
+    color: white;
+    cursor: pointer;
+}
+
+.nombre3{
+    width: 18%;
+    height:1.2em;
+}
+.abraham{
+    color: grey;
+    display: block;
+    text-align: center;
+    font-size: 1.3vw;
+    margin: 0.6em 0;
+}
+.abraham:hover{
+    color: white;
+    cursor: pointer;
+}
+
+.nombre4{
+    width: 18%;
+    height:1.2em;
+}
+.alex{
+    color: grey;
+    display: block;
+    text-align: center;
+    font-size: 1.3vw;
+    margin: 0.6em 0;
+}
+.alex:hover{
+    color: white;
+    cursor: pointer;
+}
+
+.nombre5{
+    width: 18%;
+    height:1.2em;
+}
+.niños{
+    color: grey;
+    display: block;
+    text-align: center;
+    font-size: 1.3vw;
+    margin: 0.6em 0;
+}
+.niños:hover{
+    color: white;
+    cursor: pointer;
+}
+.administrar{
+    margin-top: 50px;
+}
+.administra-perfiles{
+    display: block;
+    margin: 2em 0 1em 0;
+    font-size: 1.2vw;
+    border: 1px solid grey;
+    color: grey;
+    padding: 0.5em 1.5em;
+    letter-spacing: 2px;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.administra-perfiles:hover{
+    color: white;
+    cursor: pointer;
+    border: white 1px solid;
+}
+
