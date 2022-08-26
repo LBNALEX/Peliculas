@@ -17,6 +17,8 @@ var cuentas = [
     window.location="../../index.html"; 
   });
 
+  //Este es un ejemplo para saber si se sube el pull
+
   if(btnIniciar){
     btnIniciar.addEventListener('click', (e) => {
       validarContra();
