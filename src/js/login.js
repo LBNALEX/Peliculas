@@ -1,6 +1,6 @@
 var cuentas = [
     { id:1,nombre: 'Alejandro', correo: 'alejandro.ayala@coppel.com',clave: 'fuga123' },
-    { id:2,nombre: 'Juan José', correo: 'juan.salasz@coppel.com',clave: 'fuga321' } 
+    { id:2,nombre: 'Juan José', correo: 'juan',clave: '321' } 
   ];
 
   var jsonUsiarios = JSON.stringify(cuentas)
