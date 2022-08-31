@@ -50,7 +50,6 @@
 .perfil1{
     width: 18%;
     height: 128px;
-    background-image:  url("../img/koky.png");
     background-position: center center;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -64,7 +63,6 @@
 .perfil2{
     width: 18%;
     height: 128px;
-    background-image:  url("../img/rigo.png");
     background-position: center center;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -78,7 +76,6 @@
 .perfil3{
     width: 18%;
     height: 128px;
-    background-image:  url("../img/bicho.png");
     background-position: center center;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -91,7 +88,6 @@
 .perfil4{
     width: 18%;
     height: 128px;
-    background-image:  url("../img/alex.png");
     background-position: center center;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -104,7 +100,6 @@
 .perfil5{
     width: 18%;
     height: 128px;
-    background-image:  url("../img/niños.png");
     background-position: center center;
 	background-size: cover;
 	background-repeat: no-repeat;
