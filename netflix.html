@@ -12,6 +12,8 @@
         <link href='https://css.gg/instagram.css' rel='stylesheet'>
         <link href='https://css.gg/twitter.css' rel='stylesheet'>
         <link href='https://css.gg/youtube.css' rel='stylesheet'>
+        <link href='https://css.gg/chevron-left.css' rel='stylesheet'>
+        <link href='https://css.gg/chevron-right.css' rel='stylesheet'>
         <link rel="stylesheet" href="src/css/estilos.css">
         <link rel="stylesheet" href="src/css/estilosnetflix.css">
         <title>Netflix</title>
@@ -20,7 +22,7 @@
 
     <body class="fondo-netflix">
         <header class="encabezado-inicio">
-            <img src="src/img/Logo.svg" alt="Netflix" class="encabezadologo-inicio">
+            <img src="src/img/Logo.svg" alt="Netflix" class="encabezadologo-inicio" id="logoNetflix">
             <div class="menu">
                 <ul>
                     <li class="menuitem">Inicio</li>
@@ -33,9 +35,9 @@
             <div class="opciones">
                 <ul>
                     <li class="opcionlista"><em class="gg-search"></em></li>
-                    <li class="opcionlista">NIños</li>
+                    <li class="opcionlista">Niños</li>
                     <li class="opcionlista"><em class="gg-bell"></em></li>
-                    <li class="opcionlista"><img src="src/img/alex.png" alt="" class="imagen"></li>
+                    <li class="opcionlista"><img alt="" class="imagen" id="imagenP"></li>
                     <li class="opcionlista"> &#x25BE;</li>
                 </ul>
             </div>
@@ -49,52 +51,49 @@
             <button type="submit" class="btnReproduce"><em class="gg-play-button cambio"></em> Reproducir</button>
             <button type="submit" class="btnMasInfo"> <em class="gg-info cambio2"></em> Más Información</button>
         </div>
-
         <div class="contenido-netflix">
-            <div class="seriesRealistas">
-                <h2 class="titulos">Series realistas</h2>
-                <div class="carrusel1">
-                    <div class="serie1-1"></div>
-                    <div class="serie1-2"></div>
-                    <div class="serie1-3"></div>
-                    <div class="serie1-4"></div>
-                    <div class="serie1-5"></div>
-                    <div class="serie1-6"></div>
+            <div class="carruselnovedades contenedor1">
+                <div class="contenedor1-titulo-controles">
+                    <h2 class="titulos" id="top">Top</h2>
+                    <div class="indicadores"></div>
                 </div>
-            </div>
-            <div class="tendencias">
-                <h2 class="titulos">Tendencias</h2>
-                <div class="carrusel2">
-                    <div class="serie2-1"></div>
-                    <div class="serie2-2"></div>
-                    <div class="serie2-3"></div>
-                    <div class="serie2-4"></div>
-                    <div class="serie2-5"></div>
-                    <div class="serie2-6"></div>
+                <div class="contenedor1-principal">
+                    <button role="button" id="flechaIzquierda" class="flechaIzquierda"><em class="gg-chevron-left"></em></button>
+
+                    <div class="contenedor-carrusel1">
+                        <div class="carousel1" id="carousel1"></div>
+                    </div>
+                    <button role="button" id="flechaDerecha" class="flechaDerecha"><em class="gg-chevron-right"></em></button>
                 </div>
             </div>
 
-            <div class="anime">
-                <h2 class="titulos">Animes japoneses</h2>
-                <div class="carrusel3">
-                    <div class="serie3-1"></div>
-                    <div class="serie3-2"></div>
-                    <div class="serie3-3"></div>
-                    <div class="serie3-4"></div>
-                    <div class="serie3-5"></div>
-                    <div class="serie3-6"></div>
+            <div class="carruselgenero1 contenedor2">
+                <div class="contenedor2-titulo-controles">
+                    <h2 class="titulos" id="genero1">Genero1</h2>
+                    <div class="indicadores2"></div>
+                </div>
+                <div class="contenedor2-principal">
+                    <button role="button" id="flechaIzquierda2" class="flechaIzquierda2"><em class="gg-chevron-left"></em></button>
+
+                    <div class="contenedor-carrusel2">
+                        <div class="carousel2" id="carousel2"></div>
+                    </div>
+                    <button role="button" id="flechaDerecha2" class="flechaDerecha2"><em class="gg-chevron-right"></em></button>
                 </div>
             </div>
+            
+            <div class="carruselgenero2 contenedor3">
+                <div class="contenedor3-titulo-controles">
+                    <h2 class="titulos" id="genero2">Genero2</h2>
+                    <div class="indicadores3"></div>
+                </div>
+                <div class="contenedor3-principal">
+                    <button role="button" id="flechaIzquierda3" class="flechaIzquierda3"><em class="gg-chevron-left"></em></button>
 
-            <div class="top10">
-                <h2 class="titulos">Las 10 series más populares en México hoy</h2>
-                <div class="populares">
-                    <div class="top1"></div>
-                    <div class="top2"></div>
-                    <div class="top3"></div>
-                    <div class="top4"></div>
-                    <div class="top5"></div>
-                    <div class="top6"></div>
+                    <div class="contenedor-carrusel3">
+                        <div class="carousel3" id="carousel3"></div>
+                    </div>
+                    <button role="button" id="flechaDerecha3" class="flechaDerecha3"><em class="gg-chevron-right"></em></button>
                 </div>
             </div>
 
@@ -128,5 +127,8 @@
                 </div>
             </footer>
         </div>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <script src="src/js/netflix.js"></script>
+        
     </body>
 </html>
