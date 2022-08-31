@@ -1,11 +1,10 @@
+let imagenPerfil = document.getElementById('imagenP');
 const logo = document.getElementById('logo');
 let perfil1 = document.getElementById('p1');
 let perfil2 = document.getElementById('p2');
 let perfil3 = document.getElementById('p3');
 let perfil4 = document.getElementById('p4');
 let perfil5 = document.getElementById('p5');
-
-
 
 
 perfil1.style.backgroundImage = `url("src/img/bicho.png")`;
