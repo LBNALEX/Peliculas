@@ -73,6 +73,8 @@
 }
 .imagen{
     width: 30px;
+    border-radius: 5px;
+    height: 30px;
 }
 
 .contentLogo{
@@ -167,259 +169,278 @@
     gap: 5px;
 }
 
-.tendencias{
-    margin-top: 40px;
+/*Primer Carrusel*/
+.contenedor1{
+    width: 90%;
+    margin: auto;
+    }
+
+.contenedor1-titulo-controles{
+display: flex;
+justify-content: space-between;
+align-items: end;
+
 }
-.carrusel2{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    gap: 5px;
+.contenedor1-titulo-controles .indicadores button{
+background: #fff;
+height: 3px;
+width: 10px;
+cursor: pointer;
+border: none;
+margin-right: 2px;
 }
-.serie2-1{
-    width: 18%;
-    height: 125px;
-    background-image:  url("../img/ss1.webp");
-    background-position: center center;
-	background-size: cover;
-	background-repeat: no-repeat;
-    margin-left: 30px;
+
+.contenedor1-titulo-controles .indicadores button:hover,
+.contenedor1-titulo-controles .indicadores button.activo{
+background: red;
 }
-.serie2-1:hover{
-    border: white 2px solid;
-    cursor: pointer;
+.carruselnovedades{
+margin-bottom: 0px;
 }
-.serie2-2{
-    width: 18%;
-    height: 125px;
-    background-image:  url("../img/ss2.jpg");
-    background-position: center center;
-	background-size: cover;
-	background-repeat: no-repeat;
-  
+
+.carruselnovedades .contenedor1-principal{
+display: flex;
+align-items: center;
+position: relative;
 }
-.serie2-2:hover{
-    border: white 2px solid;
-    cursor: pointer;
+
+.carruselnovedades .contenedor1-principal .flechaIzquierda,
+.carruselnovedades .contenedor1-principal .flechaDerecha{
+position: absolute;
+border:none;
+background: rgba(0, 0, 0, 0.3);
+font-size: 40px;
+height: 50%;
+top:calc(50% - 25%);
+line-height: 40px;
+width: 50px;
+color: #fff;
+cursor: pointer;
+z-index: 500;
+transition: .2s ease all;
 }
-.serie2-3{
-    width: 18%;
-    height: 125px;
-    background-image:  url("../img/ss3.jpg");
-    background-position: center center;
-	background-size: cover;
-	background-repeat: no-repeat;
-   
+
+.carruselnovedades .contenedor1-principal .flechaIzquierda:hover,
+.carruselnovedades .contenedor1-principal .flechaDerecha:hover{
+background: rgba(0, 0, 0, 0.9);
 }
-.serie2-3:hover{
-    border: white 2px solid;
-    cursor: pointer;
+.carruselnovedades .contenedor1-principal .flechaIzquierda{
+left: 0;
 }
-.serie2-4{
-    width: 18%;
-    height: 125px;
-    background-image:  url("../img/ss4.jpg");
-    background-position: center center;
-	background-size: cover;
-	background-repeat: no-repeat;
+
+.carruselnovedades .contenedor1-principal .flechaDerecha{
+right: 0;
+}
+
+.carruselnovedades .contenedor-carrusel1{
+width: 100%;
+padding: 20px 0;
+overflow: hidden;
+scroll-behavior: smooth;
+}
+
+.carruselnovedades .contenedor-carrusel1 .carousel1{
+display: flex;
+flex-wrap: nowrap;
+}
+
+.carruselnovedades .contenedor-carrusel1 .carousel1 .pelicula1{
+min-width: 20%;
+transition: .3s ease all;
+box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.carruselnovedades .contenedor-carrusel1 .carousel1 .pelicula1.hover{
+transform: scale(1.2);
+transform-origin: center;
+cursor: pointer;
+}
+.carruselnovedades .contenedor-carrusel1 .carousel1 .pelicula1 img{
+width: 100%;
+vertical-align: top;
+}
+
+/*Segundo Carrusel*/
+.contenedor2{
+width: 90%;
+margin: auto;
+}
+
+.contenedor2-titulo-controles{
+display: flex;
+justify-content: space-between;
+align-items: end;
+
+}
+.contenedor2-titulo-controles .indicadores2 button{
+background: #fff;
+height: 3px;
+width: 10px;
+cursor: pointer;
+border: none;
+margin-right: 2px;
+}
+
+.contenedor2-titulo-controles .indicadores2 button:hover,
+.contenedor2-titulo-controles .indicadores2 button.activo2{
+background: red;
+}
+.carruselgenero1{
+margin-bottom: 0px;
+}
+
+.carruselgenero1 .contenedor2-principal{
+display: flex;
+align-items: center;
+position: relative;
+}
+
+.carruselgenero1 .contenedor2-principal .flechaIzquierda2,
+.carruselgenero1 .contenedor2-principal .flechaDerecha2{
+position: absolute;
+border:none;
+background: rgba(0, 0, 0, 0.3);
+font-size: 40px;
+height: 50%;
+top:calc(50% - 25%);
+line-height: 40px;
+width: 50px;
+color: #fff;
+cursor: pointer;
+z-index: 500;
+transition: .2s ease all;
+}
+
+.carruselgenero1 .contenedor2-principal .flechaIzquierda2:hover,
+.carruselgenero1 .contenedor2-principal .flechaDerecha2:hover{
+background: rgba(0, 0, 0, 0.9);
+}
+.carruselgenero1 .contenedor2-principal .flechaIzquierda2{
+left: 0;
+}
+
+.carruselgenero1 .contenedor2-principal .flechaDerecha2{
+right: 0;
+}
+
+.carruselgenero1 .contenedor-carrusel2{
+width: 100%;
+padding: 20px 0;
+overflow: hidden;
+scroll-behavior: smooth;
+}
+
+.carruselgenero1 .contenedor-carrusel2 .carousel2{
+display: flex;
+flex-wrap: nowrap;
+}
+
+.carruselgenero1 .contenedor-carrusel2 .carousel2 .pelicula2{
+min-width: 20%;
+transition: .3s ease all;
+box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.carruselgenero1 .contenedor-carrusel2 .carousel2 .pelicula2.hover{
+transform: scale(1.2);
+transform-origin: center;
+cursor: pointer;
+}
+.carruselgenero1 .contenedor-carrusel2 .carousel2 .pelicula2 img{
+width: 100%;
+vertical-align: top;
+}
+
+/*Tercer Carrusel*/
+.contenedor3{
+    width: 90%;
+    margin: auto;
+    }
     
-}
-.serie2-4:hover{
-    border: white 2px solid;
-    cursor: pointer;
-}
-.serie2-5{
-    width: 18%;
-    height: 125px;
-    background-image:  url("../img/ss5.jpg");
-    background-position: center center;
-	background-size: cover;
-	background-repeat: no-repeat;
-}
-.serie2-5:hover{
-    border: white 2px solid;
-    cursor: pointer;
-}
-.serie2-6{
-    width: 7%;
-    height: 125px;
-    background-image:  url("../img/ss6.jpg");
-    background-position: left center;
-	background-size: cover;
-	background-repeat: no-repeat;
-}
-.serie2-6:hover{
-    border: white 2px solid;
-    cursor: pointer;
-}
-.anime{
-    margin-top: 40px;
-}
-
-.carrusel3{
+    .contenedor3-titulo-controles{
     display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    gap: 5px;
-}
-.serie3-1{
-    width: 18%;
-    height: 125px;
-    background-image:  url("../img/sss1.jpg");
-    background-position: center center;
-	background-size: cover;
-	background-repeat: no-repeat;
-    margin-left: 30px;
-}
-.serie3-1:hover{
-    border: white 2px solid;
-    cursor: pointer;
-}
-.serie3-2{
-    width: 18%;
-    height: 125px;
-    background-image:  url("../img/sss2.webp");
-    background-position: center center;
-	background-size: cover;
-	background-repeat: no-repeat;
-  
-}
-.serie3-2:hover{
-    border: white 2px solid;
-    cursor: pointer;
-}
-.serie3-3{
-    width: 18%;
-    height: 125px;
-    background-image:  url("../img/sss3.jpg");
-    background-position: center center;
-	background-size: cover;
-	background-repeat: no-repeat;
-   
-}
-.serie3-3:hover{
-    border: white 2px solid;
-    cursor: pointer;
-}
-.serie3-4{
-    width: 18%;
-    height: 125px;
-    background-image:  url("../img/sss4.webp");
-    background-position: center center;
-	background-size: cover;
-	background-repeat: no-repeat;
+    justify-content: space-between;
+    align-items: end;
     
-}
-.serie3-4:hover{
-    border: white 2px solid;
+    }
+    .contenedor3-titulo-controles .indicadores3 button{
+    background: #fff;
+    height: 3px;
+    width: 10px;
     cursor: pointer;
-}
-.serie3-5{
-    width: 18%;
-    height: 125px;
-    background-image:  url("../img/sss5.webp");
-    background-position: center center;
-	background-size: cover;
-	background-repeat: no-repeat;
-}
-.serie3-5:hover{
-    border: white 2px solid;
-    cursor: pointer;
-}
-.serie3-6{
-    width: 7%;
-    height: 125px;
-    background-image:  url("../img/sss6.webp");
-    background-position: left center;
-	background-size: cover;
-	background-repeat: no-repeat;
-}
-.serie3-6:hover{
-    border: white 2px solid;
-    cursor: pointer;
-}
-
-.top10{
-    margin-top: 40px;
-}
-
-.populares{
+    border: none;
+    margin-right: 2px;
+    }
+    
+    .contenedor3-titulo-controles .indicadores3 button:hover,
+    .contenedor3-titulo-controles .indicadores3 button.activo3{
+    background: red;
+    }
+    .carruselgenero2{
+    margin-bottom: 0px;
+    }
+    
+    .carruselgenero2 .contenedor3-principal{
     display: flex;
-    flex-direction: row;
+    align-items: center;
+    position: relative;
+    }
+    
+    .carruselgenero2 .contenedor3-principal .flechaIzquierda3,
+    .carruselgenero2 .contenedor3-principal .flechaDerecha3{
+    position: absolute;
+    border:none;
+    background: rgba(0, 0, 0, 0.3);
+    font-size: 40px;
+    height: 50%;
+    top:calc(50% - 25%);
+    line-height: 40px;
+    width: 50px;
+    color: #fff;
+    cursor: pointer;
+    z-index: 500;
+    transition: .2s ease all;
+    }
+    
+    .carruselgenero2 .contenedor3-principal .flechaIzquierda3:hover,
+    .carruselgenero2 .contenedor3-principal .flechaDerecha3:hover{
+    background: rgba(0, 0, 0, 0.9);
+    }
+    .carruselgenero2 .contenedor3-principal .flechaIzquierda3{
+    left: 0;
+    }
+    
+    .carruselgenero2 .contenedor3-principal .flechaDerecha3{
+    right: 0;
+    }
+    
+    .carruselgenero2 .contenedor-carrusel3{
+    width: 100%;
+    padding: 20px 0;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    }
+    
+    .carruselgenero2 .contenedor-carrusel3 .carousel3{
+    display: flex;
     flex-wrap: nowrap;
-    gap: 5px;
-}
-.top1{
-    width: 18%;
-    height: 125px;
-    background-image:  url("../img/Top1.png");
-    background-position: center center;
-	background-size: cover;
-    background-repeat: no-repeat;
-    margin-left: 30px;
-}
-.top1:hover{
-    border: white 2px solid;
+    }
+    
+    .carruselgenero2 .contenedor-carrusel3 .carousel3 .pelicula3{
+    min-width: 20%;
+    transition: .3s ease all;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    }
+    
+    .carruselgenero2 .contenedor-carrusel3 .carousel3 .pelicula3.hover{
+    transform: scale(1.2);
+    transform-origin: center;
     cursor: pointer;
-}
-.top2{
-    width: 18%;
-    height: 125px;
-    background-image:  url("../img/Top2.png");
-    background-position: center center;
-	background-size: cover;
-    background-repeat: no-repeat;
-}
-.top2:hover{
-    border: white 2px solid;
-    cursor: pointer;
-}
-.top3{
-    width: 18%;
-    height: 125px;
-    background-image:  url("../img/Top3.png");
-    background-position: center center;
-	background-size: cover;
-    background-repeat: no-repeat;
-}
-.top3:hover{
-    border: white 2px solid;
-    cursor: pointer;
-}
-.top4{
-    width: 18%;
-    height: 125px;
-    background-image:  url("../img/Top4.png");
-    background-position: center center;
-	background-size: cover;
-    background-repeat: no-repeat;
-}
-.top4:hover{
-    border: white 2px solid;
-    cursor: pointer;
-}
-.top5{
-    width: 18%;
-    background-image:  url("../img/Top5.png");
-    background-position: center center;
-	background-size: cover;
-    background-repeat: no-repeat;
-}
-.top5:hover{
-    border: white 2px solid;
-    cursor: pointer;
-}
-.top6{
-    width: 7%;
-    background-image:  url("../img/Top6.png");
-    background-position: center center;
-	background-size: cover;
-    background-repeat: no-repeat;
-}
-.top6:hover{
-    border: white 2px solid;
-    cursor: pointer;
-}
+    }
+    .carruselgenero2 .contenedor-carrusel3 .carousel3 .pelicula3 img{
+    width: 100%;
+    vertical-align: top;
+    }
 
 .pie-paginaNetflix{
     width: 100%;
@@ -477,92 +498,3 @@
     font-family:  'Netflix Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
 }
 
-    /*Primer Carrusel*/
-  .contenedor1{
-    width: 90%;
-    margin: auto;
-  }
-
-  .contenedor1-titulo-controles{
-    display: flex;
-    justify-content: space-between;
-    align-items: end;
-
-  }
-  .contenedor1-titulo-controles .indicadores button{
-    background: #fff;
-    height: 3px;
-    width: 10px;
-    cursor: pointer;
-    border: none;
-    margin-right: 2px;
-  }
-
-  .contenedor1-titulo-controles .indicadores button:hover,
-  .contenedor1-titulo-controles .indicadores button.activo{
-    background: red;
-  }
-  .carruselnovedades{
-    margin-bottom: 0px;
-  }
-
-  .carruselnovedades .contenedor1-principal{
-    display: flex;
-    align-items: center;
-    position: relative;
-  }
-
-  .carruselnovedades .contenedor1-principal .flechaIzquierda,
-  .carruselnovedades .contenedor1-principal .flechaDerecha{
-    position: absolute;
-    border:none;
-    background: rgba(0, 0, 0, 0.3);
-    font-size: 40px;
-    height: 50%;
-    top:calc(50% - 25%);
-    line-height: 40px;
-    width: 50px;
-    color: #fff;
-    cursor: pointer;
-    z-index: 500;
-    transition: .2s ease all;
-  }
-
-  .carruselnovedades .contenedor1-principal .flechaIzquierda:hover,
-  .carruselnovedades .contenedor1-principal .flechaDerecha:hover{
-    background: rgba(0, 0, 0, 0.9);
-  }
-  .carruselnovedades .contenedor1-principal .flechaIzquierda{
-    left: 0;
-  }
-
-  .carruselnovedades .contenedor1-principal .flechaDerecha{
-    right: 0;
-  }
-
-  .carruselnovedades .contenedor-carrusel1{
-    width: 100%;
-    padding: 20px 0;
-    overflow: hidden;
-    scroll-behavior: smooth;
-  }
-
-  .carruselnovedades .contenedor-carrusel1 .carousel1{
-    display: flex;
-    flex-wrap: nowrap;
-  }
-
-  .carruselnovedades .contenedor-carrusel1 .carousel1 .pelicula1{
-    min-width: 20%;
-    transition: .3s ease all;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
-  }
-
-  .carruselnovedades .contenedor-carrusel1 .carousel1 .pelicula1.hover{
-    transform: scale(1.2);
-    transform-origin: center;
-  }
-  .carruselnovedades .contenedor-carrusel1 .carousel1 .pelicula1 img{
-    width: 100%;
-    vertical-align: top;
-  }
