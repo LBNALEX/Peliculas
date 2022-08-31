@@ -71,6 +71,10 @@
     font-size: 14px;
     font-family: 'Netflix Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
 }
+
+.selecciona:hover{
+    cursor: pointer;
+}
 .imagen{
     width: 30px;
     border-radius: 5px;

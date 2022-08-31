@@ -58,6 +58,9 @@ body{
     font-size: 14px;
     font-family: 'Netflix Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
 }
+.selecciona:hover{
+    cursor: pointer;
+}
 .contentLogo{
     position: absolute;
     width:36% ;

@@ -1,23 +1,30 @@
 let LogoNetflix = document.getElementById('logoNetflix');
+function cargarFotoPerfil(){
+    
 let srcImagen = localStorage.getItem('imagen');
 let imagenPerfil = document.getElementById('imagenP');
 
-// if(srcImagen.length == 24){
-//     let imgRecortada = srcImagen.slice(5,22)
-//     imagenPerfil.src = `./../${imgRecortada}`;
-// }else{
-//     let imgRecortada = srcImagen.slice(5,21);
-//     imagenPerfil= `./../${imgRecortada}`;
-// }
+console.log("imagenPerfil - "+imagenPerfil.length);
+console.log("srcImagen - "-srcImagen);
+if(srcImagen.length == 24){
+    console.log("1AAA");
+    let imgRecortada = srcImagen.slice(5,22)
+    imagenPerfil.src = `./../${imgRecortada}`;
+}else{
+    console.log("2AAA");
+    let imgRecortada = srcImagen.slice(5,21);
+    imagenPerfil.src= `./../${imgRecortada}`;
+}
+}
 
 // pelicula1.addEventListener('click', (e) => {
-//     window.open('http://127.0.0.1:5500/detallePelicula/detallePelicula.html', "_self");
+//     window.open('http://127.0.0.1:5500/detallePelicula.html', "_self");
 // })
 
-// LogoNetflix.addEventListener('click', (e) => {
-//     window.open('http://127.0.0.1:5500/inicio.html', "_self");
-//     localStorage.removeItem('imagen');
-// })
+LogoNetflix.addEventListener('click', (e) => {
+    window.open('http://127.0.0.1:5500/inicio.html', "_self");
+    localStorage.removeItem('imagen');
+})
 
 const fila1 = document.querySelector('.contenedor-carrusel1');
 const fila2 = document.querySelector('.contenedor-carrusel2');
@@ -286,7 +293,7 @@ async function getMoviesByGenre(API_KEY,genre){
 }
 
 function fillImage(imagesFill,arrMovies,nCarousel,nameSection){
-
+    cargarFotoPerfil();
     let carousel;
     let divPeliculas;
     let ref;
@@ -308,6 +315,12 @@ function fillImage(imagesFill,arrMovies,nCarousel,nameSection){
             newImage.id = arrMovies[i];
             divPeliculas.appendChild(newImage);
             carousel.appendChild(divPeliculas);
+
+            divPeliculas.addEventListener('click',() =>{
+               console.log(arrMovies[i]);
+               localStorage.setItem('idPelicula', arrMovies[i]);
+                window.open('http://127.0.0.1:5500/detallePelicula.html', "_self");
+            });
         }
         console.log(newImage.id);
         pelis = document.querySelectorAll('.pelicula1');
@@ -332,6 +345,12 @@ function fillImage(imagesFill,arrMovies,nCarousel,nameSection){
             newImage.id = arrMovies[i];
             divPeliculas.appendChild(newImage);
             carousel.appendChild(divPeliculas);
+
+            divPeliculas.addEventListener('click',() =>{
+                console.log(arrMovies[i]);
+                localStorage.setItem('idPelicula', arrMovies[i]);
+                window.open('http://127.0.0.1:5500/detallePelicula.html', "_self");
+             });
         }
         pelis2 = document.querySelectorAll('.pelicula2');
         hover(pelis2);
@@ -355,6 +374,12 @@ function fillImage(imagesFill,arrMovies,nCarousel,nameSection){
             newImage.id = arrMovies[i];
             divPeliculas.appendChild(newImage);
             carousel.appendChild(divPeliculas);
+
+            divPeliculas.addEventListener('click',() =>{
+                console.log(arrMovies[i]);
+                localStorage.setItem('idPelicula', arrMovies[i]);
+                window.open('http://127.0.0.1:5500/detallePelicula.html', "_self");
+             });
         }
         pelis3 = document.querySelectorAll('.pelicula3');
         hover(pelis3);
@@ -363,7 +388,7 @@ function fillImage(imagesFill,arrMovies,nCarousel,nameSection){
         scrollLeft3();
         scrollRight3();
     }
-
+   
 }
 
 
