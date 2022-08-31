@@ -3,9 +3,11 @@ let resumenPelicula = document.getElementById('resumenPelicula');
 let textoPelicula = document.getElementById('textoPelicula');
 let imagenPerfil = document.getElementById('imagenP');
 let srcImagen = localStorage.getItem('imagen');
+const logoNetflix = document.getElementById('logoNetflix');
 
-let imgRecortada = srcImagen.slice(5,21);
-
+logoNetflix.addEventListener('click', (e) => {
+    window.location="../../netflix.html"; 
+  });
 
 if(srcImagen.length == 24){
     let imgRecortada = srcImagen.slice(5,22)
@@ -17,7 +19,7 @@ if(srcImagen.length == 24){
 
 let API_KEY = '3f9e9869ff2588642c31ab92639da896';
 
-let idPelicula = 500;
+let idPelicula = localStorage.getItem('idPelicula');
 async function getMovie(){
     let url = `https://api.themoviedb.org/3/movie/${idPelicula}?api_key=${API_KEY}&language=es-US`;
 
