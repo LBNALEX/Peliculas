@@ -79,6 +79,10 @@ getActors().then((actors) => {
         listaActores.appendChild(elementoActores);
         elementoActores.addEventListener('click', () =>{
             localStorage.setItem('idActor', actors.cast[i].id);
+            localStorage.setItem('nameActor', actors.cast[i].name);
+            localStorage.setItem('fotoActor', actors.cast[i].profile_path);
+            window.location="../../actor.html"; 
+
         })
     }
 })
