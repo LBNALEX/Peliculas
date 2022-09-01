@@ -16,7 +16,11 @@
 	
    
 }
-
+.mensajeBusqueda{
+    position: absolute;
+    top:110px;
+    left: 500px;
+}
 .encabezado-inicio{
     width: 100%;
     display: flex;
@@ -53,7 +57,7 @@
     font-family: 'Netflix Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
 }
 .opciones{
-    width: 20%;
+    width: 40%;
     display: flex;
     display: flex;
     justify-content: space-around;
@@ -97,6 +101,7 @@
 	background-size: cover;
 	background-repeat: no-repeat;
 }
+
 .descripcionOnePiece{
     position: absolute;
     color: #fff;
