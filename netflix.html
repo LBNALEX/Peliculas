@@ -14,6 +14,7 @@
         <link href='https://css.gg/youtube.css' rel='stylesheet'>
         <link href='https://css.gg/chevron-left.css' rel='stylesheet'>
         <link href='https://css.gg/chevron-right.css' rel='stylesheet'>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
         <link rel="stylesheet" href="src/css/estilos.css">
         <link rel="stylesheet" href="src/css/estilosnetflix.css">
         <title>Netflix</title>
@@ -21,6 +22,7 @@
     </head>
 
     <body class="fondo-netflix">
+        <div id="liveAlertPlaceholder" class="mensajeBusqueda"></div>
         <header class="encabezado-inicio">
             <img src="src/img/Logo.svg" alt="Netflix" class="encabezadologo-inicio" id="logoNetflix">
             <div class="menu">
@@ -34,7 +36,8 @@
             </div>
             <div class="opciones">
                 <ul>
-                    <li class="opcionlista selecciona"><em class="gg-search"></em></li>
+                    <input type="text" class="opcionlista" placeholder="Buscar película" id="txtSearch">
+                    <li class="opcionlista selecciona"><em class="gg-search" id="btnSearch"></em></li>
                     <li class="opcionlista selecciona">Niños</li>
                     <li class="opcionlista selecciona"><em class="gg-bell"></em></li>
                     <li class="opcionlista selecciona"><img alt="" class="imagen" id="imagenP"></li>
@@ -128,6 +131,7 @@
             </footer>
         </div>
         <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
         <script src="src/js/netflix.js"></script>
         
     </body>

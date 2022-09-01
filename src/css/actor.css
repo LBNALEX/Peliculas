@@ -1,0 +1,256 @@
+/*Login*/
+.fondo{
+    width: 100%;
+    height: 780px;
+    position: relative;
+    background-image:  url("../img/FondoLoginNuevo.jpg");
+    background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.fondo:before {
+	content:'';
+	position: absolute;
+    top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: rgba(0,0,0,0.6);
+}
+
+.imagenfondo{
+    width: 100%;
+    background-blend-mode: darken;
+ 
+}
+.encabezado{
+    position:absolute ;
+    top: 0;
+}
+
+.encabezadologo{
+    width: 167px;
+    height: 45px;
+    margin-top: 20px;
+    margin-left: 30px;
+    cursor: pointer;
+}
+
+.contenido{
+    display: flex;
+    flex-direction: row; 
+    width: 1000px;
+    height: 500px;
+    background-color: rgba(0,0,0,.75);
+    padding-top: 60px;
+    padding-right: 68px;
+    padding-bottom: 40px;
+    padding-left: 68px;
+    margin-bottom: 90px;
+    border-radius: 4px;
+    position: absolute;
+    top: 100px;
+    left: 100px;
+}
+
+.contenedorPerfil{
+    width: 950px;
+    height: 455px;
+    background-color: #0071eb;
+}
+.contenedorPeliculas{
+    width: 950px;
+    height: 455px;
+    background-color: #e50914;
+}
+
+.titulo{
+    color:white;
+    display: block;
+    font-size: 30px;
+    margin-left: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+.perfilActor{
+    width: 450px;
+    height: 300px;
+}
+
+.isesion{
+    position: absolute;
+    margin: 0;
+    color: white;
+    font-size: 32px;
+    display: block;
+}
+
+.correo{
+    display: block;
+    margin-top: 60px;
+    margin-bottom: 16px;
+    border-radius: 4px;
+    border: 0;
+    background-color:  rgb(68, 66, 66);
+    height: 50px;
+    width: 296px;
+    padding-left: 20px;
+    font-size:16px ;
+
+    
+}
+.contraseña{
+    display: block;
+    border-radius: 4px;
+    border: 0;
+    background-color:  rgb(68, 66, 66);
+    height: 50px;
+    width: 296px;
+    padding-left: 20px;
+    font-size:16px ;
+}
+
+.btn-iniciar{
+    display: block;
+    width: 318px;
+    height: 52px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 700;
+    margin: 40px 0 12px;
+    background: #e50914;
+    color: #fff;
+    cursor: pointer;
+}
+
+.chk-recuerdame{
+
+    padding-top: 30px;
+    width: 16px;
+    height: 16px;
+}
+.etiqueta{
+    height: 30px;
+}
+.lbl-recuerdame{
+    margin-right: 80px;
+    color: #b3b3b3;
+    font-size: 13px;
+    font-weight: 500;
+    padding-bottom: 30px;
+}
+.help{
+   
+    cursor: pointer;
+    color: #b3b3b3;
+    font-size: 13px;
+    font-weight: 500;
+    padding-top: 2px;
+    text-decoration: none;
+}
+.informacion{
+    width: 318px;
+    height: 50px;
+   margin-top: 50px;
+}
+
+.primeravez{
+    color: #737373;
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 16px;
+}
+.suscribete-ahora{
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 16px;
+    text-decoration: none;
+    color:#fff;
+    cursor: pointer;
+
+}
+.suscribete{
+    text-decoration: none;
+    color:#fff;
+    cursor: pointer;
+}
+.no-robot{
+    margin-top: 11px;
+}
+.captcha{
+    font-size: 13px;
+    color: #8c8c8c;
+    text-align: left;
+}
+.masinfo{
+    border: none;
+    color: #0071eb;
+    cursor: pointer;
+    display: inline;
+    font-size: 13px;
+    padding: 0;
+    text-decoration: none;
+}
+.pie-pagina{
+    width: 100%;
+    height: 250px;
+    position:absolute ;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.6);
+    padding-top: 30px;
+    padding-right: 0px;
+   
+  
+}
+
+.preguntas{
+    color: #757575;
+    margin: 0 0 30px;
+    padding-left: 130px;
+    width: 1000px;
+}
+
+.menu-footer{
+    width: 1000px;
+   
+    padding-left: 130px;
+}
+.menu-footer ul{
+    padding-left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.menu-footer ul li{
+    width: 25%;
+    display: inline;
+    color: #757575;
+    list-style: none;
+    font-size: 13px;
+    margin-bottom: 16px;
+}
+
+.lenguaje{
+    padding-left: 130px;
+    width: 1000px;
+    color: #757575;
+}
+
+.combo{
+    background-color: #000;
+    background-image: none;
+    border: 1px solid #333; 
+    color: #757575;
+    font-size: 14px;
+    border-radius: 2px;
+    width: 130px;
+    height: 50px;
+}
+.fa{
+    text-align: end;
+    padding-right: 10px;
+    color:#737373
+}

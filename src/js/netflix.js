@@ -1,30 +1,7 @@
+const btnSearch = document.getElementById('btnSearch');
+const txtSearch = document.getElementById('txtSearch');
+const alertaEspacio = document.getElementById('liveAlertPlaceholder');
 let LogoNetflix = document.getElementById('logoNetflix');
-function cargarFotoPerfil(){
-    
-let srcImagen = localStorage.getItem('imagen');
-let imagenPerfil = document.getElementById('imagenP');
-
-console.log("imagenPerfil - "+imagenPerfil.length);
-console.log("srcImagen - "-srcImagen);
-if(srcImagen.length == 24){
-    console.log("1AAA");
-    let imgRecortada = srcImagen.slice(5,22)
-    imagenPerfil.src = `./../${imgRecortada}`;
-}else{
-    console.log("2AAA");
-    let imgRecortada = srcImagen.slice(5,21);
-    imagenPerfil.src= `./../${imgRecortada}`;
-}
-}
-
-// pelicula1.addEventListener('click', (e) => {
-//     window.open('http://127.0.0.1:5500/detallePelicula.html', "_self");
-// })
-
-LogoNetflix.addEventListener('click', (e) => {
-    window.open('http://127.0.0.1:5500/inicio.html', "_self");
-    localStorage.removeItem('imagen');
-})
 
 const fila1 = document.querySelector('.contenedor-carrusel1');
 const fila2 = document.querySelector('.contenedor-carrusel2');
@@ -40,10 +17,81 @@ const flechaDerecha3 = document.getElementById('flechaDerecha3');
 let API_KEY = "2dbc6cfb9f0b204e19642c36f4bd9762";
 let moviesTopRanked = [];
 let imagesTopRanked = [];
+let moviesShown = [];
 
 var pelis;
 var pelis2;
 var pelis3;
+
+//cargar foto de perfil
+function cargarFotoPerfil(){
+    
+    let srcImagen = localStorage.getItem('imagen');
+    let imagenPerfil = document.getElementById('imagenP');
+    
+    if(srcImagen.length == 24){
+        let imgRecortada = srcImagen.slice(5,22)
+        imagenPerfil.src = `./../${imgRecortada}`;
+    }else{
+        let imgRecortada = srcImagen.slice(5,21);
+        imagenPerfil.src= `./../${imgRecortada}`;
+    }
+}
+    
+//botón de busqueda
+function searchMovie(moviesShown){
+    btnSearch.addEventListener('click', (e) => {
+    let existe = false;
+
+    if(txtSearch.value == ""){
+        const wrapper = document.createElement('div')
+      wrapper.innerHTML = [
+        `<div class="alert alert-danger alert-dismissible" role="alert">`,
+        `   <div>Favor de ingresar el nombre de la película</div>`,
+        '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+        '</div>'
+      ].join('')
+      alertaEspacio.append(wrapper);
+        return;
+    }
+        moviesShown.forEach(movie => {
+            if(txtSearch.value === movie){
+                existe = true;
+                return existe;
+            }
+        });
+        if(existe){
+            const wrapper = document.createElement('div')
+            wrapper.innerHTML = [
+              `<div class="alert alert-success alert-dismissible" role="alert">`,
+              `   <div>La pelicula ${txtSearch.value} se encuentra en el catálogo</div>`,
+              '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+              '</div>'
+            ].join('')
+            alertaEspacio.append(wrapper);
+        }
+        else{
+            const wrapper = document.createElement('div')
+      wrapper.innerHTML = [
+        `<div class="alert alert-danger alert-dismissible" role="alert">`,
+        `   <div>La pelicula ${txtSearch.value} no se encuentra en el catálogo</div>`,
+        '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+        '</div>'
+      ].join('')
+      alertaEspacio.append(wrapper);
+        }
+        txtSearch.value = '';
+    });
+    
+}
+
+
+//regresar a los perfiles
+LogoNetflix.addEventListener('click', (e) => {
+    window.open('http://127.0.0.1:5500/inicio.html', "_self");
+    localStorage.removeItem('imagen');
+});
+
 //Scroll
 function scrollRight(){
     flechaDerecha.addEventListener('click', () =>{
@@ -136,7 +184,6 @@ function deshover(pelis){
 }
 //paginacion
 function pagination(pelis){
-    console.log(pelis);
     const numeroPaginas = Math.ceil(pelis.length / 5);
     for(let i = 0; i<numeroPaginas;i++){
         const indicador1 = document.createElement('button');
@@ -204,11 +251,9 @@ getTopRanked(API_KEY).then((movies) => {
     for (let movie of movies) {
         moviesTopRanked[index] = movie.id;
         imagesTopRanked[index] = `https://image.tmdb.org/t/p/w500${movie.backdrop_path}`;
-
+        moviesShown[moviesShown.length] =movie.title;
         index++;
     }
-    console.log(moviesTopRanked);
-    console.log(imagesTopRanked);
 
     fillImage(imagesTopRanked,moviesTopRanked,1,"Mejores películas");
 });
@@ -243,7 +288,7 @@ getGenres(API_KEY).then((genres) => {
         
         index++;
     }
-    console.log(genreObj);
+    
 
     //buscar peliculas por genero1 
     getMoviesByGenre(API_KEY,genreObj.genero1).then((movies) => {
@@ -253,10 +298,10 @@ getGenres(API_KEY).then((genres) => {
         for (let movie of movies) {
             movieGenre1[index] = movie.id;
             movieGenre1Img[index] = `https://image.tmdb.org/t/p/w500${movie.backdrop_path}`;
-    
+            moviesShown[moviesShown.length] =movie.title;
             index++;
         }
-        console.log(movieGenre1);
+       
 
     fillImage(movieGenre1Img,movieGenre1,2,genreObj.genero1.name);
 
@@ -270,10 +315,10 @@ getGenres(API_KEY).then((genres) => {
         for (let movie of movies) {
             movieGenre2[index] = movie.id;
             movieGenre2Img[index] = `https://image.tmdb.org/t/p/w500${movie.backdrop_path}`;
-    
+            moviesShown[moviesShown.length] =movie.title;
             index++;
         }
-        console.log(movieGenre2);
+        
 
     fillImage(movieGenre2Img,movieGenre2,3,genreObj.genero2.name);
 
@@ -298,13 +343,12 @@ function fillImage(imagesFill,arrMovies,nCarousel,nameSection){
     let divPeliculas;
     let ref;
     let newImage;
-    console.log(nameSection);
     if(nCarousel === 1){
         carousel = document.getElementById('carousel1');
         const top = document.getElementById('top');
         top.innerHTML = nameSection;
 
-        for (let i = 0; i < 15; i++) {
+        for (let i = 0; i < 20; i++) {
             divPeliculas = document.createElement('div');    
             divPeliculas.classList.add('pelicula1');  
             ref = document.createElement('a');
@@ -317,12 +361,10 @@ function fillImage(imagesFill,arrMovies,nCarousel,nameSection){
             carousel.appendChild(divPeliculas);
 
             divPeliculas.addEventListener('click',() =>{
-               console.log(arrMovies[i]);
                localStorage.setItem('idPelicula', arrMovies[i]);
                 window.open('http://127.0.0.1:5500/detallePelicula.html', "_self");
             });
         }
-        console.log(newImage.id);
         pelis = document.querySelectorAll('.pelicula1');
         hover(pelis);
         deshover(pelis);
@@ -334,7 +376,7 @@ function fillImage(imagesFill,arrMovies,nCarousel,nameSection){
         carousel = document.getElementById('carousel2');
         const genero1 = document.getElementById('genero1');
         genero1.innerHTML = nameSection;
-        for (let i = 0; i < 15; i++) {
+        for (let i = 0; i < 20; i++) {
             divPeliculas = document.createElement('div');    
             divPeliculas.classList.add('pelicula2');  
             ref = document.createElement('a');
@@ -347,7 +389,6 @@ function fillImage(imagesFill,arrMovies,nCarousel,nameSection){
             carousel.appendChild(divPeliculas);
 
             divPeliculas.addEventListener('click',() =>{
-                console.log(arrMovies[i]);
                 localStorage.setItem('idPelicula', arrMovies[i]);
                 window.open('http://127.0.0.1:5500/detallePelicula.html', "_self");
              });
@@ -363,7 +404,7 @@ function fillImage(imagesFill,arrMovies,nCarousel,nameSection){
         carousel = document.getElementById('carousel3');
         const genero2 = document.getElementById('genero2');
         genero2.innerHTML = nameSection;
-        for (let i = 0; i < 15; i++) {
+        for (let i = 0; i < 20; i++) {
             divPeliculas = document.createElement('div');    
             divPeliculas.classList.add('pelicula3');  
             ref = document.createElement('a');
@@ -376,7 +417,6 @@ function fillImage(imagesFill,arrMovies,nCarousel,nameSection){
             carousel.appendChild(divPeliculas);
 
             divPeliculas.addEventListener('click',() =>{
-                console.log(arrMovies[i]);
                 localStorage.setItem('idPelicula', arrMovies[i]);
                 window.open('http://127.0.0.1:5500/detallePelicula.html', "_self");
              });
@@ -388,9 +428,9 @@ function fillImage(imagesFill,arrMovies,nCarousel,nameSection){
         scrollLeft3();
         scrollRight3();
     }
-   
+    console.log(moviesShown);
 }
-
+let peliculaEncontrada = searchMovie(moviesShown);
 
 
 
